@@ -12,20 +12,20 @@ export default function App(props) {
             <h1>Лабораторная №1. Функциональные компоненты.</h1>
         </div>
         <div>
-          Введите количество секунд:
+          Введите количество секунд&nbsp;
           <input
               type="text"
               value={delay}
               onChange={e => setDelay(e.target.value)} />
         </div>
         <div>
-          Показать таймер:
+          Показать таймер
           <input
               type="checkbox"
               value={isShowing}
               onChange={e => setIsShowing(e.target.checked)} />
         </div>
-        <div>
+        <div className="timer">
           {isShowing && <Timer delay={delay} />}
         </div>
       </div>

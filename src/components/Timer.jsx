@@ -1,20 +1,24 @@
 import React, { useState, useEffect } from 'react';
 
 export default function Timer({ delay }) {
-    const [remainingTime, setRemainingTime] = useState(delay);
+    const [time, setTime] = useState(delay);
 
     useEffect(() => {
+        let remainingTime = time;
         let timerId = 0;
 
-        if (remainingTime) {
+        if (time) {
             timerId = setInterval(() => {
-                setRemainingTime(remainingTime => remainingTime - 1);
+                if (remainingTime > 0) {
+                    remainingTime--;
+                    setTime(remainingTime);
+                }
             }, 1000);
         }
         return () => {
             clearInterval(timerId);
         };
-    });
+    }, []);
 
-    return <span>{remainingTime}</span>;
+    return <span>{time}</span>;
 }

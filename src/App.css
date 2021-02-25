@@ -1,4 +1,39 @@
+body {
+    color: #81adcb;
+    font-family: "Consolas", serif;
+    font-size: 20pt;
+    text-shadow: 1px 1px 1px #ececec;
+}
+
+div {
+    margin: 1%;
+}
+
+h1 {
+    color: #486272;
+}
+
+input {
+    color: #81adcb;
+    font-family: "Consolas", serif;
+    font-size: 20pt;
+    text-shadow: 1px 1px 1px #ececec;
+
+    height: 30px;
+    width: 150px;
+
+    border-style: solid;
+    border-color: #81adcb;
+
+    outline-style: none;
+}
+
+.timer {
+    color: #486272;
+    font-size: 70pt;
+}
+
 .wrapper {
-    width: 900px;
+    width: 1200px;
     margin: 0 auto;
 }
